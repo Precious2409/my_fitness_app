@@ -1,0 +1,2 @@
+# my_fitness_app
+AFRESH CAPSTONE PROJECT
