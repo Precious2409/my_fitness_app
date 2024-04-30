@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:my_fitness_app/common/colo_extension.dart';
+import 'package:my_fitness_app/home/home_view.dart';
+import 'package:my_fitness_app/knowing_you/about_you.dart';
 import 'package:my_fitness_app/onboarding/splash_screen.dart';
+import 'package:my_fitness_app/sign_up/signup_screen.dart';
 
 
 void main() {
@@ -26,14 +29,15 @@ class MyApp extends StatelessWidget {
           fontFamily: "Lato" ,
           useMaterial3: false,
         ),
-        home: const SplashScreen(),
-       /** routes: {
+        home:  SignupScreen(),
+        routes: {
           "/signuppage": (context) => const SignupScreen(),
           "/aboutyoupage": (context) => const AboutYou(),
-          "/fitnessgoalspage": (context) => const FitnessGoals(),
+          "/homeview": (context) => const HomeView(),
+        /**  "/fitnessgoalspage": (context) => const FitnessGoals(),
           "/activitylevel": (context) => const ActivityLevelCheck(),
-
-        },**/
+            **/
+        },
       ),
     );
   }

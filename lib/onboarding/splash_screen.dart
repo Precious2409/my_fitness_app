@@ -1,7 +1,9 @@
-import 'package:animated_splash_screen/animated_splash_screen.dart';
+/**import 'package:animated_splash_screen/animated_splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:my_fitness_app/common/colo_extension.dart';
+import 'package:my_fitness_app/knowing_you/about_you.dart';
+import 'package:my_fitness_app/sign_up/signup_screen.dart';
 
 import 'onboarding_screen.dart';
 
@@ -34,10 +36,10 @@ class SplashScreen extends StatelessWidget {
           ]
       ),
       backgroundColor: TColor.primaryColor3,
-      nextScreen: const OnboardingScreen(),
+      nextScreen: const SignupScreen(),
       splashIconSize: 240,
       splashTransition: SplashTransition.fadeTransition,
       duration: 1800,
     );
   }
-}
+}**/
