@@ -22,43 +22,54 @@ class _OnboardingScreenState extends State<OnboardingScreen>{
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-      child: Container(
-          child: Stack(
-              children: [
-                Column(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children:[
+      child: Stack(
+        children: [
+          Container(
+              child: PageView(
+                  controller: controller,
+                  children: [
+                    OnboardingScreen1(),
+                    OnboardingScreen2(),
+                    OnboardingScreen3(),
+                  ],
+                ),
+          ),
 
-                  PageView(
-                    controller: controller,
-                    children: [
-                      OnboardingScreen1(),
-                      OnboardingScreen2(),
-                      OnboardingScreen3(),
-                    ],
-                  ),
-                  SmoothPageIndicator(
+
+              Positioned(
+                top: 650.h,
+                child: Padding(
+                  padding: const EdgeInsets.all(20.0),
+                  child: SmoothPageIndicator(
                     axisDirection: Axis.horizontal,
                     controller: controller,
                     count: 3,
                     effect: ExpandingDotsEffect(
-                        dotColor: Colors.transparent,
-                        activeDotColor: Colors.white,
-                        dotHeight: 8.h,
-                        dotWidth: 24.w,
+                      dotColor: Colors.white10,
+                      activeDotColor: Colors.white,
+                      dotHeight: 8.h,
+                      dotWidth: 10.w,
 
 
                     ),
                   ),
-
-
-                ]
+                ),
               ),
-            ]
-            )
+          Positioned(
+            left: 300.h,
+            child: MaterialButton(
+                onPressed: (){
+                  Navigator.pushNamed(context, "/aboutyoupage");
+                },
+              child: Text("Skip", style: TextStyle(color: Colors.white),),
+              color: Colors.transparent,
+            ),
+          )
+        ],
       ),
     );
   }
 }
+
 
 

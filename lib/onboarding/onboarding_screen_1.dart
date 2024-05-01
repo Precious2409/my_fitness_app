@@ -12,7 +12,7 @@ class _OnboardingScreen1State extends State<OnboardingScreen1> {
   @override
   Widget build(BuildContext context) {
     return const OnboardingPage(
-      image: "assets/images/unlock_your_potential.png",
+     image: "assets/images/unlock_your_potential.png",
       title: 'Unlock Your Potential',
       subtitle: 'Get access to well curated workout routines for a stronger,healthier you',
     );

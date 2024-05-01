@@ -12,7 +12,7 @@ class _OnboardingScreen2State extends State<OnboardingScreen2> {
   @override
   Widget build(BuildContext context) {
     return OnboardingPage(
-      image: 'assets/images/embrace_vitality.png',
+     image: 'assets/images/embrace_vitality.png',
       title: 'Embrace Vitality',
       subtitle: 'Embrace a healthier lifestyle, discover the power of active living',
     );

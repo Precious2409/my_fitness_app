@@ -7,7 +7,7 @@ class ButtonElevation extends StatelessWidget {
   final double? btnWidth;
   final double? btnHeight;
   final Color? btnTextColor;
-  final Color btnColour;
+  final Color? btnColor;
 
 
 
@@ -17,10 +17,10 @@ class ButtonElevation extends StatelessWidget {
     required this.onPressed,
     this.btnTextColor = Colors.white,
     required this.btnText,
-    this.fontSize = 14,
+    this.fontSize = 16,
     this.btnWidth,
     this.btnHeight,
-    this.btnColour = Colors.black,});
+    this.btnColor = Colors.black,});
 
   @override
   Widget build(BuildContext context) {
@@ -31,7 +31,7 @@ class ButtonElevation extends StatelessWidget {
               btnWidth ?? MediaQuery.of(context).size.width,
               btnHeight ?? MediaQuery.of(context).size.height * 0.06
           ),
-          backgroundColor: btnColour,
+          backgroundColor: btnColor,
           elevation: 1.0,
           shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(15)
@@ -41,7 +41,8 @@ class ButtonElevation extends StatelessWidget {
           btnText,
           style: TextStyle(
               fontSize: fontSize,
-              color: btnTextColor
+              color: btnTextColor,
+              fontWeight: FontWeight.w600
           )
       ),
     );
