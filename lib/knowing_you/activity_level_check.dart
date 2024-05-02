@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:my_fitness_app/common/common_widgets/button_elevation.dart';
 
 
@@ -15,87 +16,81 @@ class _ActivityLevelCheckState extends State<ActivityLevelCheck> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-        child: Container(
-          child: Scaffold(
-            appBar: AppBar(
-              leading: IconButton(
-                icon: Icon(Icons.arrow_back_ios) ,
-                onPressed: () {},
-              ),
-            ),
-            body: Column(
-              children: [
-                Text(
-                  "Help us understand your typical activity level",
-                  style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      fontSize:  16
+        child: Scaffold(
+          body: ListView(
+            children: [
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  IconButton(
+                    icon: Icon(
+                        Icons.arrow_back_ios,
+                        color: Colors.black,
+                        size: 24
+                    ) ,
+                    onPressed: () {},
                   ),
-                ),
-
-                SizedBox(height: 10,),
-
-                Column(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  children: [
-                    Text(
-                      "Understanding your activity level helps us tailor workouts to match your lifestyle and energy needs",
-                      style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          fontSize: 14
-                      ),
+                  Text(
+                    "Help us understand your typical "
+                        "activity level",
+                    style: TextStyle(
+                        fontWeight: FontWeight.w600,
+                        fontSize: 24.sp,
+                        color: Colors.black
                     ),
+                  ),
 
-                    SizedBox(height: 20),
+                  SizedBox(height: 10.h,),
 
-                    Text(
-                      "How would you describe your activity level?",
-                      style: TextStyle(
-                        fontSize: 14,
-                        fontWeight: FontWeight.bold,
-                      ),
+                  Text(
+                    "Understanding your activity level helps us tailor workouts to match your lifestyle and energy needs",
+                    style: TextStyle(
+                        fontWeight: FontWeight.w400,
+                        fontSize: 16.sp,
+                        color: Colors.black
                     ),
+                  ),
 
-                    SizedBox(height: 10,),
+                  SizedBox(height: 20),
 
-                    Row(
-                      children: [
-                        Radio(
-                            value: 1,
-                            groupValue: _value,
-                            onChanged: (value){},
-                            activeColor: Colors.black
-                        ),
+                  Text(
+                    "How would you describe your activity level?",
+                    style: TextStyle(
+                        fontWeight: FontWeight.w400,
+                        fontSize: 16.sp,
+                        color: Colors.black
+                    ),
+                  ),
 
-                        SizedBox(width: 10,),
+                  SizedBox(height: 10.h,),
 
-                        Text("Sedentary(little to no exercise)"),
-                      ],
-                    ) ,
+                  Row(
+                    children: [
+                      Radio(
+                          value: 1,
+                          groupValue: _value,
+                          onChanged: (value){},
+                          activeColor: Colors.black
+                      ),
 
-                    Row(
-                      children: [
-                        Radio(
-                            value: 2,
-                            groupValue: _value,
-                            onChanged: (value){
-                              setState(() {
-                                _value = value;
-                              });
-                            },
-                            activeColor: Colors.black
-                        ),
-                        SizedBox(width: 10,),
 
-                        Text("Lightly active"),
-                      ],
-                    ) ,
 
-                    SizedBox(height: 10,),
+                      Text(
+                          "Sedentary(little to no exercise)",
+                      style:TextStyle(
+                          fontWeight: FontWeight.w600,
+                          fontSize: 16.sp,
+                          color: Colors.black
+                      )
+                      ),
+                    ],
+                  ) ,
 
-                    Row(
-                      children: [
-                        RadioListTile(
+                  SizedBox(height: 10.h,),
+
+                  Row(
+                    children: [
+                      Radio(
                           value: 2,
                           groupValue: _value,
                           onChanged: (value){
@@ -103,22 +98,76 @@ class _ActivityLevelCheckState extends State<ActivityLevelCheck> {
                               _value = value;
                             });
                           },
-                          activeColor: Colors.black ,
-                          title: Text("Moderately active"),
+                          activeColor: Colors.black
+                      ),
+                      SizedBox(width: 10,),
+
+                      Text(
+                          "Lightly active (light exercise/sports 1-3 days a week)",
+                        style: TextStyle(
+                            fontWeight: FontWeight.w600,
+                            fontSize: 16.sp,
+                            color: Colors.black
                         ),
-                      ],
-                    ),
+                      ),
+                    ],
+                  ) ,
 
-                    SizedBox(height: 10,),
-                  ],
-                ),
+                  SizedBox(height: 10,),
 
-                ButtonElevation(
-                    onPressed: (){},
-                    btnText: "Continue"
-                )
-              ],
-            ),
+                  Row(
+                    children: [
+                      Radio(
+                        value: 2,
+                        groupValue: _value,
+                        onChanged: (value){
+                          setState(() {
+                            _value = value;
+                          });
+                        },
+                        activeColor: Colors.black ,
+                      ),
+                      Text(
+                          "Moderately active (moderate exercise/"
+                              "sports 3 - 5 days a week)",
+                        style:TextStyle(
+                            fontWeight: FontWeight.w600,
+                            fontSize: 16.sp,
+                            color: Colors.black
+                        )
+                      ),
+
+                      Text(
+                          "Very active (hard exercise/"
+                              "sports 6 - 7 days a week)",
+                          style:TextStyle(
+                              fontWeight: FontWeight.w600,
+                              fontSize: 16.sp,
+                              color: Colors.black
+                          )
+                      ),
+
+                      Text(
+                          "Extremely active (very hard exercise/"
+                              "sports & physical job or 2x training)",
+                          style:TextStyle(
+                              fontWeight: FontWeight.w600,
+                              fontSize: 16.sp,
+                              color: Colors.black
+                          )
+                      ),
+                    ],
+                  ),
+
+                  SizedBox(height: 10,),
+
+                  ButtonElevation(
+                      onPressed: (){},
+                      btnText: "Continue"
+                  )
+                ],
+              ),
+            ],
           ),
         )
     );
