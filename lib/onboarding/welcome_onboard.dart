@@ -11,7 +11,16 @@ class WelcomeOnboard extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
         body: Container(
-          padding: EdgeInsets.all(10),
+          decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(10.r),
+              image: DecorationImage(
+                image: AssetImage(
+                  "assets/images/nourish_your_body.png",
+                ),
+                fit: BoxFit.cover,
+              )
+          ),
+          padding: EdgeInsets.all(20),
           margin: EdgeInsets.only(top: 120.h),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,

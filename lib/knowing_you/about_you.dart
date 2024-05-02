@@ -122,6 +122,8 @@ class _AboutYouState extends State<AboutYou> {
                       obscureText: false
                   ),
 
+                  SizedBox(height: 20,),
+
 
                   ButtonElevation(
                       onPressed: (){
