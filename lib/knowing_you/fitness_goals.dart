@@ -19,139 +19,159 @@ class _FitnessGoalsState extends State<FitnessGoals> {
         // ignore: prefer_const_constructors
         body: Padding(
           padding: const EdgeInsets.all(10.0),
-          child: ListView(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  IconButton(
-                    icon: Icon(
-                        Icons.arrow_back_ios,
-                        color: Colors.black,
-                        size: 24
-                    ) ,
-                    onPressed: () {},
-                  ),
-                  Text(
-                      "Tell Us Your Fitness Goals",
-                    style: TextStyle(
-                        fontWeight: FontWeight.w600,
-                        fontSize: 24.sp,
-                        color: Colors.black
-                    ),
-                  ),
+              IconButton(
+                icon: Icon(
+                    Icons.arrow_back_ios,
+                    color: Colors.black,
+                    size: 24
+                ) ,
+                onPressed: () {},
+              ),
 
-                  SizedBox(height: 10.h,),
+              SizedBox(height: 10.h,),
 
-                  Text(
-                      "What are your primary fitness objectives? Let us"
-                          "know your goals and we'll help you reach them!",
-                    style: TextStyle(
-                        fontWeight: FontWeight.w400,
-                        fontSize: 16.sp,
-                        color: Colors.black
-                    ),
-                  ),
+              Text(
+                  "Tell Us Your Fitness Goals",
+                style: TextStyle(
+                    fontWeight: FontWeight.w600,
+                    fontSize: 24.sp,
+                    color: Colors.black
+                ),
+              ),
 
-                  SizedBox(height: 20.h,),
+              SizedBox(height: 10.h,),
 
-                  Text(
-                      "What are your primary fitness goals?",
-                      style:TextStyle(
-                          fontWeight: FontWeight.w600,
-                          fontSize: 16.sp,
-                          color: Colors.black
-                      )
-                  ),
+              Text(
+                  "What are your primary fitness objectives? Let us"
+                      " know your goals and we'll help you reach them!",
+                style: TextStyle(
+                    fontWeight: FontWeight.w400,
+                    fontSize: 16.sp,
+                    color: Colors.black
+                ),
+              ),
 
-                  ListTileLead(
-                    title: "Lose weight",
-                    onClicked: () {  },
-                    conWidth: MediaQuery.of(context).size.width,
-                  ),
+              SizedBox(height: 20.h,),
 
-                  SizedBox(height: 10.h,),
-
-                  ListTileLead(
-                    title: "Gain Muscle",
-                    onClicked: () {  },
-                    conWidth: MediaQuery.of(context).size.width,
-                  ),
-
-                  SizedBox(height: 10.h,),
-
-                  ListTileLead(
-                    title: "Keep Fit",
-                    onClicked: () {  },
-                    conWidth: MediaQuery.of(context).size.width,
-                  ),
-
-                  SizedBox(height: 10.h,),
-
-                  ListTileLead(
-                    title: "Get Stronger",
-                    onClicked: () {  },
-                    conWidth: MediaQuery.of(context).size.width,
-                  ),
-
-                  SizedBox(height: 15,),
-
-                  Text(""),
-
-                  SizedBox(height: 20.h,),
-
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    children: [
-                      ButtonOutlined(
-                        label: "Chest",
-                        btnWidth: 50,
-                        onPressed: (){},
-                      ),
-                      ButtonOutlined(
-                        label: "Back",
-                        btnWidth: 50,
-                        onPressed: (){},
-                      ),
-                    ],
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      ButtonOutlined(
-                        label: "Shoulder",
-                        btnWidth: 50,
-                        onPressed: (){},
-                      ),
-                      ButtonOutlined(
-                        label: "Arms",
-                        btnWidth: 50,
-                        onPressed: (){},
-                      ),
-                    ],
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      ButtonOutlined(
-                        label: "Abdomen",
-                        btnWidth: 50,
-                        onPressed: (){},
-                      ),
-                      ButtonOutlined(
-                        label: "Legs",
-                        btnWidth: 50,
-                        onPressed: (){},
-                      ),
-                    ],
-                  ),
-
-                  ButtonElevation(
-                      onPressed: (){},
-                      btnText: "Continue"
+              Text(
+                  "What are your primary fitness goals?",
+                  style:TextStyle(
+                      fontWeight: FontWeight.w600,
+                      fontSize: 16.sp,
+                      color: Colors.black
                   )
+              ),
+
+              ListTile(
+                title: Text("Lose weight"),
+                leading: IconButton(
+                    onPressed: (){},
+                    icon: Icon(Icons.search)
+                ),
+              ),
+
+              // ListTileLead(
+              //
+              //   onClicked: () {  },
+              //   conWidth: MediaQuery.of(context).size.width,
+              // ),
+
+              SizedBox(height: 10.h,),
+
+              //ListTileLead(
+              //   title: "Gain Muscle",
+              //   onClicked: () {  },
+              //   conWidth: MediaQuery.of(context).size.width,
+              // ),
+              //
+              // SizedBox(height: 10.h,),
+              //
+              // ListTileLead(
+              //   title: "Keep Fit",
+              //   onClicked: () {  },
+              //   conWidth: MediaQuery.of(context).size.width,
+              // ),
+              //
+              // SizedBox(height: 10.h,),
+              //
+              // ListTileLead(
+              //   title: "Get Stronger",
+              //   onClicked: () {  },
+              //   conWidth: MediaQuery.of(context).size.width,
+              // ),
+              //
+              // SizedBox(height: 15,),
+              //
+              // Text(""),
+              //
+              // SizedBox(height: 20.h,),
+              //
+              Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  ButtonOutlined(
+                    label: "Chest",
+                    btnWidth: MediaQuery.of(context).size.width * 0.4,
+                    onPressed: (){},
+                  ),
+
+                  SizedBox(width: 30.w,),
+
+                  ButtonOutlined(
+                    label: "Back",
+                    btnWidth: MediaQuery.of(context).size.width * 0.4,
+                    onPressed: (){},
+                  ),
+                ],
+               ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  ButtonOutlined(
+                    label: "Shoulder",
+                    btnWidth: MediaQuery.of(context).size.width * 0.4,
+                    onPressed: (){},
+                  ),
+
+                  SizedBox(width: 30.w,),
+
+                  ButtonOutlined(
+                    label: "Arms",
+                    btnWidth: MediaQuery.of(context).size.width * 0.4,
+                    onPressed: (){},
+                  ),
                 ],
               ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  ButtonOutlined(
+                    label: "Abdomen",
+                    btnWidth: MediaQuery.of(context).size.width * 0.4,
+                    onPressed: (){},
+                  ),
+
+                  SizedBox(width: 30.w,),
+
+                  ButtonOutlined(
+                    label: "Legs",
+                    btnWidth: MediaQuery.of(context).size.width * 0.4,
+                    onPressed: (){},
+                  ),
+                ],
+              ),
+
+              SizedBox(height: 20.h,),
+
+              ButtonElevation(
+                  onPressed: (){
+                    Navigator.pushNamed(context, '/activitylevel');
+                  },
+                  btnText: "Continue"
+              )
             ],
           ),
         ),

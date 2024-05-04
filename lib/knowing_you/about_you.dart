@@ -45,7 +45,7 @@ class _AboutYouState extends State<AboutYou> {
                   SizedBox(height: 10.h,),
                   Text(
                     "Your journey begins here! Please provide some"
-                        "basic details to personalize your experience.",
+                        " basic details to personalize your experience.",
                     style: TextStyle(
                         fontWeight: FontWeight.w400,
                         fontSize: 16.sp,
@@ -113,14 +113,7 @@ class _AboutYouState extends State<AboutYou> {
                     obscureText: false,
                   ),
 
-                  SizedBox(height: 10,),
 
-                  FormWidget(
-                      title: "Enter your weight(in kg)",
-                      hintText: "Input weight here",
-                      textInputType: TextInputType.number,
-                      obscureText: false
-                  ),
 
                   SizedBox(height: 20,),
 

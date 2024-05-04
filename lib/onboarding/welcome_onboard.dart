@@ -12,7 +12,6 @@ class WelcomeOnboard extends StatelessWidget {
       child: Scaffold(
         body: Container(
           decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(10.r),
               image: DecorationImage(
                 image: AssetImage(
                   "assets/images/nourish_your_body.png",
@@ -21,37 +20,41 @@ class WelcomeOnboard extends StatelessWidget {
               )
           ),
           padding: EdgeInsets.all(20),
-          margin: EdgeInsets.only(top: 120.h),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.start,
             children:[
-              Text(
-                  "Welcome to My Fitness App",
-                style: TextStyle(
-                  fontSize: 40.sp,
-                  fontWeight: FontWeight.w400,
-                  fontFamily: "Lato",
-                  color: Colors.white
-                ),
-              ),
+             Container(
+               margin: EdgeInsets.only(top: 350.h),
+               child: Column(
+                 children: [
+                   Text(
+                     "Welcome to My Fitness App",
+                     style: TextStyle(
+                         fontSize: 40.sp,
+                         fontWeight: FontWeight.w400,
+                         fontFamily: "Lato",
+                         color: Colors.white
+                     ),
+                   ),
 
-              SizedBox(height: 10.h,),
+                   SizedBox(height: 10.h,),
 
-              Align(
-                alignment: Alignment.centerRight,
-                  child: Text(
-                      "Your one stop destination for all things"
-                          "fitness and nutrition. Get ready to"
-                          "embark on a journey towards a"
-                          "healthier happier you.",
-                    style: TextStyle(
-                      fontWeight: FontWeight.w500,
-                      fontSize: 20.sp,
-                      color: Colors.white,
-                    ),
-                  )
-              ),
+                   Text(
+                     "Your one stop destination for all things"
+                         " fitness and nutrition. Get ready to"
+                         " embark on a journey towards a"
+                         " healthier happier you.",
+                     style: TextStyle(
+                       fontWeight: FontWeight.w500,
+                       fontSize: 20.sp,
+                       color: Colors.white,
+                     ),
+                   ),
+
+                 ],
+               ),
+             ),
 
               SizedBox(height: 10.h,),
 

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:my_fitness_app/common/colo_extension.dart';
+import 'package:my_fitness_app/create_account/create_account.dart';
+import 'package:my_fitness_app/explore/explore_page.dart';
 import 'package:my_fitness_app/home/home_view.dart';
 import 'package:my_fitness_app/knowing_you/about_you.dart';
 import 'package:my_fitness_app/knowing_you/activity_level_check.dart';
@@ -42,6 +44,8 @@ class MyApp extends StatelessWidget {
           "/onboardingscreen": (context) => const OnboardingScreen(),
           "/fitnessgoalspage": (context) => const FitnessGoals(),
           "/activitylevel": (context) => const ActivityLevelCheck(),
+          "/createaccount":(context)=> const CreateAccount(),
+          "/explorepage": (context)=> const ExplorePage(),
 
         },
       ),

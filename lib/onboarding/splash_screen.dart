@@ -34,9 +34,9 @@ class SplashScreen extends StatelessWidget {
       ),
       backgroundColor: TColor.primaryColor3,
       nextScreen: const WelcomeOnboard(),
-      splashIconSize: 240,
+      splashIconSize: 270,
       splashTransition: SplashTransition.fadeTransition,
-      duration: 1800,
+      duration: 2000,
     );
   }
 }

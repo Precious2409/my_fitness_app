@@ -130,31 +130,33 @@ class _SignupScreenState extends State<SignupScreen> {
                   ButtonElevation(
                       btnText: "Sign Up",
                       onPressed: (){
-                        Navigator.pushNamed(context, "/homeview");
+                        Navigator.pushNamed(context, "/explorepage");
                       }
                   ),
 
                   SizedBox(height: 10.h,),
 
-                  RichText(
-                    textAlign: TextAlign.center,
-                      text: TextSpan(
-                          style: TextStyle(
-                              color: TColor.black,
-                              fontSize: 14.sp
-                          ),
-                          children: <TextSpan>[
-                            TextSpan(
-                                text: "Already have an account?"
+                  Center(
+                    child: RichText(
+                      textAlign: TextAlign.center,
+                        text: TextSpan(
+                            style: TextStyle(
+                                color: TColor.black,
+                                fontSize: 14.sp
                             ),
-                            TextSpan(
-                                text: "Login Now",
-                                style: TextStyle(
-                                  color: Colors.red,
-                                )
-                            )
-                          ]
-                      )
+                            children: <TextSpan>[
+                              TextSpan(
+                                  text: "Already have an account?"
+                              ),
+                              TextSpan(
+                                  text: "Login Now",
+                                  style: TextStyle(
+                                    color: Colors.red,
+                                  )
+                              )
+                            ]
+                        )
+                    ),
                   )
                 ]
               ),

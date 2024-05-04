@@ -75,22 +75,22 @@ class HomeView extends StatelessWidget {
                                 "assets/images/location.png",
                             )
                             ),
-                            SizedBox(height: 10,),
+                            SizedBox(height: 8,),
                             Text(
                                 "30mins",
                               style: TextStyle(
-                                fontSize: 18.sp,
+                                fontSize: 14.sp,
                                 fontWeight: FontWeight.w600,
                                   color: TColor.primaryColor1
                               ) ,
                             ),
-                            SizedBox(height: 8,),
                             Text(
                               "Workout Completed",
                               style: TextStyle(
-                                  fontSize: 14.sp,
+                                  fontSize: 12.sp,
                                   fontWeight: FontWeight.w600,
-                                  color: TColor.primaryColor1
+                                  color: TColor.primaryColor1,
+                                overflow: TextOverflow.ellipsis
                               ) ,
                             ),
 
@@ -100,7 +100,7 @@ class HomeView extends StatelessWidget {
                     ),
                   ],
                 ),
-                SizedBox(height: 20,),
+                SizedBox(height: 10,),
 
                 ListTile(
                   leading: Text(
@@ -114,17 +114,18 @@ class HomeView extends StatelessWidget {
                   trailing: Icon(Icons.arrow_forward_ios_rounded),
                 ),
 
-                SizedBox(height: 20,),
+                SizedBox(height: 10,),
 
                 Container(
                   width: 358.w,
-                  height: 97.h,
+                  height: 112.h,
                   child: Card(
-                    color: Colors.greenAccent,
+                    color: Color(0xff4F9D5B),
                     shape: RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(20))),
                     child: Padding(
-                      padding: EdgeInsets.all(12),
+                      padding: EdgeInsets.all(8),
                       child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Row(
                             children: [
@@ -136,6 +137,9 @@ class HomeView extends StatelessWidget {
                                 color: Colors.white
                               ),
                               ),
+
+                              SizedBox(width: MediaQuery.of(context).size.width * 0.25),
+
                               ElevatedButton(
                                   onPressed: (){},
                                   style: ElevatedButton.styleFrom(
