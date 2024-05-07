@@ -130,7 +130,7 @@ class _SignupScreenState extends State<SignupScreen> {
                   ButtonElevation(
                       btnText: "Sign Up",
                       onPressed: (){
-                        Navigator.pushNamed(context, "/explorepage");
+                        Navigator.pushNamed(context, "/prologinscaffold");
                       }
                   ),
 

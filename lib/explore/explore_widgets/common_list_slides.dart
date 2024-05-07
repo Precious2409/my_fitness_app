@@ -15,7 +15,7 @@ class CommonListSlides extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.start,
       children: [
         Text(
-          "title",
+          title,
           style: TextStyle(
               fontSize: 16,
               fontWeight: FontWeight.bold

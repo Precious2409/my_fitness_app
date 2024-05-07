@@ -25,26 +25,31 @@ class ListTileLead extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListView(
-      children: [
-        Container(
-          height: 25.h,
-          decoration: BoxDecoration(
-              border: Border.all(
-                color: Colors.grey.shade700,
-                width: conWidth,
-              )
-          ),
-          child: ListTile(
-            leading: Icon(Icons.search_outlined),
-            title: Text(title),
-            selectedTileColor: TColor.primaryColor3,
-            onTap: onClicked,
-            iconColor: Colors.black,
-            textColor: Colors.black45,
-          ),
+    return SafeArea(
+      child: Container(
+        height: 25,
+        child: ListView(
+          children: [
+            Container(
+              height: 25.h,
+              decoration: BoxDecoration(
+                  border: Border.all(
+                    color: Colors.grey.shade700,
+                    width: conWidth,
+                  )
+              ),
+              child: ListTile(
+                leading: Icon(Icons.search_outlined),
+                title: Text(title),
+                selectedTileColor: TColor.primaryColor3,
+                onTap: onClicked,
+                iconColor: Colors.black,
+                textColor: Colors.black45,
+              ),
+            ),
+          ],
         ),
-      ],
+      ),
     );
   }
 }

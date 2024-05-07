@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:my_fitness_app/common/colo_extension.dart';
+import 'package:my_fitness_app/home/home_container.dart';
 import 'package:my_fitness_app/profile/profile_avatar.dart';
 
 class HomeView extends StatelessWidget {
@@ -28,7 +29,7 @@ class HomeView extends StatelessWidget {
                         fontWeight: FontWeight.w600,
                         color: TColor.primaryColor1
                     ),),
-                  trailing: ProfileAvatar(),
+                  trailing: ProfileAvatar(rad: 25.r),
                 ),
 
                 SizedBox(height: 15.h,),
@@ -56,48 +57,9 @@ class HomeView extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
-                    Container(
-                      margin: EdgeInsets.all(10),
-                      height: 108.h,
-                      width: 108.h,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(8.r),
-                        color: TColor.primaryColor3
-                      ),
-                      child: Container(
-                        padding: EdgeInsets.all(8),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            ImageIcon(
-                                size: 24.88,
-                                AssetImage(
-                                "assets/images/location.png",
-                            )
-                            ),
-                            SizedBox(height: 8,),
-                            Text(
-                                "30mins",
-                              style: TextStyle(
-                                fontSize: 14.sp,
-                                fontWeight: FontWeight.w600,
-                                  color: TColor.primaryColor1
-                              ) ,
-                            ),
-                            Text(
-                              "Workout Completed",
-                              style: TextStyle(
-                                  fontSize: 12.sp,
-                                  fontWeight: FontWeight.w600,
-                                  color: TColor.primaryColor1,
-                                overflow: TextOverflow.ellipsis
-                              ) ,
-                            ),
-
-                          ],
-                        ),
-                      ),
-                    ),
+                    HomeContainer(),
+                    HomeContainer(),
+                    HomeContainer(),
                   ],
                 ),
                 SizedBox(height: 10,),
@@ -187,3 +149,4 @@ class HomeView extends StatelessWidget {
     );
   }
 }
+

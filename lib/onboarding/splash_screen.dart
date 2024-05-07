@@ -18,8 +18,8 @@ class SplashScreen extends StatelessWidget {
             SizedBox(
               child: Image.asset(
                 "assets/images/vector.png",
-                width: 260,
-                height: 260,
+                width: 210,
+                height: 210,
               ),
             ),
              Text(
@@ -27,7 +27,7 @@ class SplashScreen extends StatelessWidget {
               style: TextStyle(
                 fontWeight: FontWeight.w700,
                 fontSize: 40.sp,
-                color: Color(0xff151222),
+                color: Color(0xff312C51),
               ),
             )
           ]

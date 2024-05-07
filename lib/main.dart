@@ -4,6 +4,7 @@ import 'package:my_fitness_app/common/colo_extension.dart';
 import 'package:my_fitness_app/create_account/create_account.dart';
 import 'package:my_fitness_app/explore/explore_page.dart';
 import 'package:my_fitness_app/home/home_view.dart';
+import 'package:my_fitness_app/home/prologin_scaffold.dart';
 import 'package:my_fitness_app/knowing_you/about_you.dart';
 import 'package:my_fitness_app/knowing_you/activity_level_check.dart';
 import 'package:my_fitness_app/knowing_you/fitness_goals.dart';
@@ -46,6 +47,7 @@ class MyApp extends StatelessWidget {
           "/activitylevel": (context) => const ActivityLevelCheck(),
           "/createaccount":(context)=> const CreateAccount(),
           "/explorepage": (context)=> const ExplorePage(),
+          "/prologinscaffold":(context)=> const ProloginScaffold(),
 
         },
       ),
